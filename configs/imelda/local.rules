@@ -1,0 +1,9 @@
+alert tcp any any -> $HOME_NET 22 ( msg:"ECOTRACK Bruteforce SSH detecte"; flags:S; detection_filter:track by_src, count 5, seconds 60; classtype:attempted-admin; sid:1000001; rev:1; )
+
+alert tcp any any -> 10.10.2.0/24 80 ( msg:"ECOTRACK Injection SQL UNION SELECT"; content:"UNION"; content:"SELECT"; classtype:web-application-attack; sid:1000002; rev:1; )
+
+alert tcp any any -> 10.10.2.0/24 80 ( msg:"ECOTRACK Injection SQL DROP TABLE"; content:"DROP"; content:"TABLE"; classtype:web-application-attack; sid:1000003; rev:1; )
+
+alert tcp any any -> $HOME_NET any ( msg:"ECOTRACK Scan de ports detecte"; flags:S; detection_filter:track by_src, count 10, seconds 60; classtype:attempted-recon; sid:1000004; rev:1; )
+
+alert tcp any any -> 10.10.4.0/24 8883 ( msg:"ECOTRACK Trafic MQTT anormal detecte"; detection_filter:track by_src, count 100, seconds 60; classtype:policy-violation; sid:1000006; rev:1; )
