@@ -1,0 +1,54 @@
+<dashboard version="1.1" theme="dark">
+  <label>ECOTRACK Infrastructure</label>
+  <description>État de toutes les VMs - Projet ECOTRACK</description>
+  <row>
+    <panel>
+      <title>🖥️ VMs connectées à Splunk</title>
+      <table>
+        <search>
+          <query>index=ecotrack | stats count by host | sort -count</query>
+          <earliest>-24h</earliest>
+          <latest>now</latest>
+          <refresh>60s</refresh>
+        </search>
+      </table>
+    </panel>
+    <panel>
+      <title>📈 Volume de logs par VM (1h)</title>
+      <chart>
+        <search>
+          <query>index=ecotrack earliest=-1h | timechart count by host</query>
+          <earliest>-1h</earliest>
+          <latest>now</latest>
+          <refresh>60s</refresh>
+        </search>
+        <option name="charting.chart">line</option>
+        <option name="charting.chart.style">shiny</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>🔐 Tentatives SSH échouées</title>
+      <table>
+        <search>
+          <query>index=ecotrack ("Failed password" OR "Invalid user") | stats count by host | sort -count</query>
+          <earliest>-24h</earliest>
+          <latest>now</latest>
+          <refresh>60s</refresh>
+        </search>
+      </table>
+    </panel>
+    <panel>
+      <title>⚠️ Erreurs critiques système</title>
+      <table>
+        <search>
+          <query>index=ecotrack (error OR failed OR critical) | stats count by host | sort -count | head 10</query>
+          <earliest>-24h</earliest>
+          <latest>now</latest>
+          <refresh>60s</refresh>
+        </search>
+      </table>
+    </panel>
+  </row>
+</dashboard>

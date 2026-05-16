@@ -1,0 +1,53 @@
+<dashboard version="1.1" theme="dark">
+  <label>ECOTRACK SOC</label>
+  <description>Dashboard SOC - Alertes Snort IDS en temps réel - Projet ECOTRACK</description>
+  <row>
+    <panel>
+      <title>🚨 Alertes Snort en temps réel</title>
+      <table>
+        <search>
+          <query>index=ecotrack sourcetype=snort | table _time, src_ip, dest_ip, msg | sort -_time | head 20</query>
+          <earliest>-24h</earliest>
+          <latest>now</latest>
+          <refresh>30s</refresh>
+        </search>
+      </table>
+    </panel>
+    <panel>
+      <title>🔴 Nombre d'alertes 24h</title>
+      <single>
+        <search>
+          <query>index=ecotrack sourcetype=snort earliest=-24h | stats count as Total_Alertes</query>
+          <earliest>-24h</earliest>
+          <latest>now</latest>
+          <refresh>30s</refresh>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>📊 Timeline des alertes</title>
+      <chart>
+        <search>
+          <query>index=ecotrack sourcetype=snort | timechart count span=5m</query>
+          <earliest>-24h</earliest>
+          <latest>now</latest>
+          <refresh>60s</refresh>
+        </search>
+        <option name="charting.chart">area</option>
+      </chart>
+    </panel>
+    <panel>
+      <title>🌐 Top 10 IPs attaquantes</title>
+      <chart>
+        <search>
+          <query>index=ecotrack sourcetype=snort | stats count by src_ip | sort -count | head 10</query>
+          <earliest>-24h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">bar</option>
+      </chart>
+    </panel>
+  </row>
+</dashboard>

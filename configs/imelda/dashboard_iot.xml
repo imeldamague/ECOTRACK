@@ -1,0 +1,58 @@
+<dashboard version="1.1" theme="dark">
+  <label>ECOTRACK IoT</label>
+  <description>Capteurs de poubelles - Données MQTT en temps réel</description>
+  <row>
+    <panel>
+      <title>📡 Messages MQTT reçus</title>
+      <chart>
+        <search>
+          <query>index=ecotrack sourcetype=mosquitto | timechart count span=5m as Messages_MQTT</query>
+          <earliest>-1h</earliest>
+          <latest>now</latest>
+          <refresh>30s</refresh>
+        </search>
+        <option name="charting.chart">area</option>
+        <option name="charting.chart.style">shiny</option>
+      </chart>
+    </panel>
+    <panel>
+      <title>🗑️ Capteurs les plus actifs</title>
+      <table>
+        <search>
+          <query>index=ecotrack sourcetype=mosquitto | rex field=_raw "capteurs/(?&lt;capteur&gt;[^\s']+)" | stats count by capteur | sort -count | head 10</query>
+          <earliest>-24h</earliest>
+          <latest>now</latest>
+          <refresh>60s</refresh>
+        </search>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>🚨 Alertes MQTT anormal</title>
+      <table>
+        <search>
+          <query>index=ecotrack "ECOTRACK Trafic MQTT anormal" | stats count by src_ip | sort -count</query>
+          <earliest>-24h</earliest>
+          <latest>now</latest>
+          <refresh>30s</refresh>
+        </search>
+      </table>
+    </panel>
+    <panel>
+      <title>📊 Total messages IoT aujourd'hui</title>
+      <single>
+        <search>
+          <query>index=ecotrack sourcetype=mosquitto earliest=-24h | stats count as Total_Messages</query>
+          <earliest>-24h</earliest>
+          <latest>now</latest>
+          <refresh>60s</refresh>
+        </search>
+        <option name="colorBy">value</option>
+        <option name="colorMode">block</option>
+        <option name="rangeColors">["0x65A637","0xF7BC38","0xD93F3C"]</option>
+        <option name="rangeValues">[0,100]</option>
+      </single>
+    </panel>
+  </row>
+</dashboard>
