@@ -7,6 +7,7 @@ Plateforme IoT de Gestion des Dechets Urbains — Paris
 Soutenance : 29 & 30 juin 2026
 
 
+
 Equipe
 MembreRoleVMsImeldaChef de projet / RSSIECO-MON · ECO-SEC · ECO-MQTTMarie ClaudeArchitecte reseauECO-PROXY · ECO-DBEphraFirewall & DeveloppementVM0-pfSense · ECO-APP · ECO-WEB
 
