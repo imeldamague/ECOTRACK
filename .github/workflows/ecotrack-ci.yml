@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
 
       - name: Verifier presence fichiers critiques
         run: |
@@ -52,7 +52,7 @@ jobs:
     needs: validation-configs
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
 
       - name: Installer Bandit
         run: pip install bandit --quiet
@@ -80,7 +80,7 @@ jobs:
     needs: audit-securite
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
 
       - name: Rapport ANSSI
         run: |
