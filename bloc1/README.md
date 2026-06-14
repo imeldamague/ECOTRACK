@@ -12,10 +12,14 @@
 
 ## Rapport
 
-- [Telecharger le rapport Bloc 1](https://github.com/imeldamague/ECOTRACK/blob/main/bloc1/docs/ECOTRACK_Bloc1_Final.pdf)
-- [Schema reseau Draw.io](https://github.com/imeldamague/ECOTRACK/blob/main/bloc1/diagrams/ECOTRACK_Schema_Final.drawio)
-- [Diagramme BPMN](https://github.com/imeldamague/ECOTRACK/blob/main/bloc1/diagrams/ECOTRACK_BPMN_Processus.drawio)
-- [Gantt 8 sprints](https://github.com/imeldamague/ECOTRACK/blob/main/bloc1/diagrams/ECOTRACK_Gantt.drawio)
+- [Telecharger le rapport Bloc 1]([ECOTRACK_Bloc1_groupe2-imelda-marieclaiude-ephra.pdf](https://github.com/user-attachments/files/28934702/ECOTRACK_Bloc1_groupe2-imelda-marieclaiude-ephra.pdf)
+)
+- [Schema reseau Draw.io](<img width="1499" height="1049" alt="reseau" src="https://github.com/user-attachments/assets/82da0575-3d6d-480b-8721-ce7d9424f65d" />
+)
+- [Diagramme BPMN](<img width="1647" height="1162" alt="ECOTRACK_BPMN_Processus drawio" src="https://github.com/user-attachments/assets/c194bb97-783f-440c-9861-9c8063436157" />
+)
+- [Gantt 8 sprints](<img width="1912" height="792" alt="ECOTRACK_Gantt drawio" src="https://github.com/user-attachments/assets/d9c59055-3054-4731-ab9d-4e3ac6eac42f" />
+)
 
 ---
 
