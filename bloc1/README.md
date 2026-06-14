@@ -16,8 +16,6 @@
 
 ## Diagrammes
 
-![Schema reseau](https://github.com/user-attachments/assets/82da0575-3d6d-480b-8721-ce7d9424f65d)
-
 ![Diagramme BPMN](https://github.com/user-attachments/assets/c194bb97-783f-440c-9861-9c8063436157)
 
 ![Gantt 8 sprints](https://github.com/user-attachments/assets/d9c59055-3054-4731-ab9d-4e3ac6eac42f)
