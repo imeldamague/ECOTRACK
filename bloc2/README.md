@@ -12,9 +12,10 @@
 
 ## Rapport Bloc 2
 
-- [Telecharger le rapport Bloc 2][ECOTRACK_Bloc2_groupe 2-imelda-marieclaude ..pdf](https://github.com/user-attachments/files/29013243/ECOTRACK_Bloc2_groupe.2-imelda-marieclaude.pdf)
+- [Telecharger le rapport Bloc 2](https://github.com/user-attachments/files/29013243/ECOTRACK_Bloc2_groupe.2-imelda-marieclaude.pdf)
 
-- [Diagramme STRIDE]<img width="1677" height="1227" alt="ECOTRACK_STRIDE_Diagram drawio" src="https://github.com/user-attachments/assets/02e96fe8-1684-458d-aef1-516f3ea16a8a" />
+  Diagramme STRIDE
+  <img width="1677" height="1227" alt="ECOTRACK_STRIDE_Diagram drawio" src="https://github.com/user-attachments/assets/02e96fe8-1684-458d-aef1-516f3ea16a8a" />
 
 ## Architecture securite - 5 couches
 <img width="1499" height="1049" alt="reseau" src="https://github.com/user-attachments/assets/cf4de50b-c3e5-48b3-a7f0-33be7054a6f4" />
