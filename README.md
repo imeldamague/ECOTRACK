@@ -56,4 +56,8 @@
 <img width="1499" height="1049" alt="reseau" src="https://github.com/user-attachments/assets/aa1644c8-ea41-4448-8131-87ac61c2c424" />
 
 ## Soutenance — 29 & 30 juin 2026
-Master 1 Réseaux & Cybersécurité — INGETIS Paris
+Master 1 Infrastructures & Cybersécurité — INGETIS Paris
+
+
+- [Profil GitHub](https://github.com/imeldamague)
+- [Autres projets et laboratoires](https://github.com/imeldamague/projets)
